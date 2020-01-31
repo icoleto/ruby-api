@@ -20,7 +20,9 @@ require "rails/test_unit/railtie"
 Bundler.require(*Rails.groups)
 
 #Load the env variables
-Dotenv::Railtie.load
+if ['development', 'test'].include? ENV['RAILS_ENV']
+  Dotenv::Railtie.load
+end
 module RubyApi
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
