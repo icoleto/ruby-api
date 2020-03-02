@@ -1,24 +1,45 @@
-# README
+# ruby-api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an example of a simple REST api used for educational purposes
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+These instructions will get you a copy of the project up and running on your local machine.
 
-* System dependencies
+### Prerequisites
 
-* Configuration
+It needs to have installed:
+- rvm 1.29.9 (package manager for the JavaScript programming language)
+https://rvm.io/
 
-* Database creation
+- Ruby version: 2.6.3 (using rvm)
 
-* Database initialization
+### Installing
+Install the ruby version using rvm
 
-* How to run the test suite
+```bash
+rvm install ruby 2.6.3
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Make it as default
+```bash
+rvm --default use 2.6.3
+```
 
-* Deployment instructions
+With the project management tool the dependencies will be downloaded by default into the /home/USER/.rvm/gems/ruby-X.X.X/gems/ folder from the npm repository using the command:
+```bash
+bundle install
+```
 
-* ...
+### Run
+
+Use the command:
+```bash
+rails server
+```
+
+
+
+## Authors
+
+* **Iván Coleto** - [Github - icoleto](https://github.com/icoleto)
