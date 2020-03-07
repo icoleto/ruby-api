@@ -38,5 +38,8 @@ module RubyApi
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
     config.debug_exception_response_format = :api
+
+    # Remove forgery protection
+    config.action_controller.allow_forgery_protection = false
   end
 end
