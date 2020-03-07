@@ -5,7 +5,7 @@ class UserController < ApplicationController
   # GET /user?name=some_name
   def index
     name = params['name']
-    @user = User.find_by(:name => name)
+    @user = User.where(:name => name)
     render json: @user
   end
 
