@@ -1,13 +1,10 @@
 development:
-  # Configure available database sessions. (required)
-sessions:
-   default:
-      uri: <%= "mongodb://#{ENV['DB_USER']}:#{ENV['DB_PASS']}@#{ENV['DB_HOST']}" %> 
-      options: 
-        consistency: :strong
-        max_retries: 30
-        retry_interval: 1
-        timeout: 15
+  clients:
+    default:
+      uri: <%= "mongodb://#{ENV['DB_USER']}:#{ENV['DB_PASS']}@#{ENV['DB_HOST']}?retryWrites=false" %>
+      options:
+        server_selection_timeout: 5
+        retryWrites: false
 
 test:
   clients:
